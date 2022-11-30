@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    font-family: 'Rubik', cursive;
+}
+
+body{
+    background: hsl(226, 43%, 10%);
+    font-family: 'Rubik', cursive;
+}
+
+.main-admin{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    height: 587px;
+    width: 100%;
+    background: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    box-shadow: hsl(235, 45%, 61%) 2px 2px 15px 5px;
+}
+
+.main-admin:hover{
+    box-shadow: hsl(523, 94%, 25%) 1px 1px 1px 3px;
+}
+
+h1{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    width: 98.7%;
+    margin-top: 10px;
+    border-radius: 100px;
+    background: hsl(226, 43%, 10%);
+    box-shadow: black 1px 2px 1px;
+}
+
+h1:hover{
+    box-shadow: white 2px 5px 8px;
+}
+
+#title{
+    font-family: 'Rubik', cursive;
+    position: absolute;
+    text-align: center;
+    margin-top: 8px;
+    width: 99.4%;
+    color: white;
+    text-shadow: #041562 10px 10px 5px;
+    font-size: 24px;
+}
+
+#title:hover{
+    color: #df1919;
+    font-size: 30px;
+    margin-top: 1px;
+}
+
+.admin{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 24.5%;
+    background-color: hsl(236, 100%, 87%);
+    border-radius: 20px;
+    box-shadow: hsl(226, 43%, 10%) 3px 3px 2px 1px;
+    width: 50%;
+    height: 300px;
+}
+
+.admin:hover{
+    box-shadow: hsl(226, 43%, 10%) 2px 2px 8px 1px;
+}
+
+.input{
+    font-family: 'Rubik', cursive;
+    width: 300px;
+    height: 25px;
+    margin-top: 55px;
+    text-align: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 20px;
+    color: hsl(246, 80%, 60%);
+    font-weight: 800;
+    text-shadow: hsl(43, 84%, 65%) 2px 2px 2px;
+}
+
+.input:hover{
+    background: white;
+    color: #df1919;
+}
+
+::placeholder{
+    color: hsl(15, 100%, 70%);
+    font-family: 'Rubik', cursive;
+    text-shadow: hsl(43, 84%, 65%) 2px 2px 2px;
+}
+
+#entrar{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 50px;
+    margin-left: -44px;
+    color: hsl(228, 45%, 44%);
+    background-color: hsl(236, 100%, 87%);
+}
+
+#entrar:hover{
+    cursor: pointer;
+    box-shadow: hsl(228, 45%, 44%) 2px 2px 15px 1px;
+    color: white;
+    background-color: hsl(235, 45%, 61%);
+}
+
+#play{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 250px;
+    margin-left: 350px;
+    color: honeydew;
+    background-color: hsl(523, 94%, 45%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#playfalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 250px;
+    margin-left: 350px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 2px;
+}
+
+#play:hover{
+    cursor: pointer;
+    height: 35px;
+    width: 95px;
+    margin-top: 248px;
+    margin-left: 348px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+}
+
+#reset{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 280px;
+    margin-left: 350px;
+    color: white;
+    background-color: hsl(1, 00%, 25%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#resetfalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 280px;
+    margin-left: 350px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 2px;
+}
+
+#reset:hover{
+    cursor: pointer;
+    height: 35px;
+    width: 95px;
+    margin-top: 278px;
+    margin-left: 348px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+}
+
+#back{
+    position: absolute;
+    color: hsl(236, 100%, 87%);
+    margin-top: 39%;
+    margin-left: -30px;
+}
+
+#back:hover{
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin-top: 38.8%;
+    margin-left: -45px;
+}
+
+#amigosecreto{
+    position: absolute;
+    color: hsl(236, 100%, 87%);
+    margin-top: 8.8%;
+    margin-left: 155px;
+}
+
+#amigosecreto:hover{
+    cursor: pointer;
+    margin-top: 8.8%;
+    margin-left: 143px;
+    font-size: 20px;
+    color: white;
+}
+
+.attribution2 {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.attribution2 a {
+    color: hsl(228, 45%, 44%);
+}
+
+#data{
+    position: absolute;
+    color: black;
+    background-color: #041562;
+    border: 1px solid red;
+    margin-top: 150px;
+    margin-left: 200px;
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+}
+
+#set{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: -270px;
+    color: honeydew;
+    background-color: hsl(523, 94%, 25%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#get{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: -120px;
+    color: white;
+    background-color: hsl(528, 15%, 44%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#setfalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: -270px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 2px;
+}
+
+#getfalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: -120px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 2px;
+}
+
+#update{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: 30px;
+    color: white;
+    background-color: hsl(943, 414%, 35%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#updatefalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: 30px;
+    color: white;
+    background-color: hsl(943, 414%, 35%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#delete{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: 185px;
+    color: white;
+    background-color: hsl(1, 500%, 25%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#deletefalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 450px;
+    margin-left: 185px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 2px;
+}
+
+#set,#get,#update,#updatefalso,#delete:hover {
+    cursor: pointer;
+}
+
+
+#set:hover{
+    height: 35px;
+    width: 95px;
+    margin-top: 448px;
+    margin-left: -272px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+
+}
+
+#get:hover{
+    height: 35px;
+    width: 95px;
+    margin-top: 448px;
+    margin-left: -122px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+
+}
+
+#update:hover{
+    height: 35px;
+    width: 95px;
+    margin-top: 448px;
+    margin-left: 28px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+
+}
+
+#updatefalso:hover{
+    height: 35px;
+    width: 95px;
+    margin-top: 448px;
+    margin-left: 28px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+
+}
+
+#delete:hover{
+    height: 35px;
+    width: 95px;
+    margin-top: 448px;
+    margin-left: 183px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+
+}
+
+#limpiar{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 310px;
+    margin-left: 350px;
+    color: white;
+    background-color: hsl(1, 500%, 25%);
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 22px 2px;
+}
+
+#limpiar:hover{
+    height: 35px;
+    width: 95px;
+    margin-top: 308px;
+    margin-left: 348px;
+    border: 0px;
+    box-shadow: #df1919 2px 2px 20px;
+    font-size: 16px;
+
+}
+
+#limpiarfalso{
+    position: absolute;
+    border-radius: 20px;
+    height: 30px;
+    width: 90px;
+    margin-top: 310px;
+    margin-left: 350px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid hsl(235, 46%, 20%);
+    box-shadow: #041562 1px 1px 2px;
+}
