@@ -1880,13 +1880,15 @@ const deleteUser = (userInput) => {
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.isConfirmed){
+
+            arrayUser.splice(indexArray, 1);
+            guardarDB(arrayUser);
+
             Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',
                 'success'
         );
-        arrayUser.splice(indexArray, 1);
-        guardarDB(arrayUser);
         }
     })
 
@@ -1907,14 +1909,34 @@ const updateUser = (userLogin) => {
     let newRegaloTwo = document.getElementById("regaloTwo").value;
     let newRegaloThree = document.getElementById("regaloThree").value;
 
-    // arrayUser[indexArray].name = newName;
-    arrayUser[indexArray].password = newPass;
-    arrayUser[indexArray].username = newUser;
-    arrayUser[indexArray].regaloOne = newRegaloOne;
-    arrayUser[indexArray].regaloTwo = newRegaloTwo;
-    arrayUser[indexArray].regaloThree = newRegaloThree;
 
-    guardarDB(arrayUser);
+    Swal.fire({
+        title: 'Do you want to save the changes?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't save`,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            // arrayUser[indexArray].name = newName;
+            arrayUser[indexArray].password = newPass;
+            arrayUser[indexArray].username = newUser;
+            arrayUser[indexArray].regaloOne = newRegaloOne;
+            arrayUser[indexArray].regaloTwo = newRegaloTwo;
+            arrayUser[indexArray].regaloThree = newRegaloThree;
+
+            guardarDB(arrayUser);
+            
+            Swal.fire('Saved!', '', 'success')
+            winAudio.play();
+        }
+        else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+            wrongAudio.play();
+        }
+    })
+
     
 }
 
@@ -2017,24 +2039,44 @@ const updateUserAdmin = (userInput) => {
         amigoEncontrado = "No Definido";
     }
 
-    let newName = arrayUser[indexArray].name;
-    let newPass = document.getElementById('pass').value;
-    let newUser = document.getElementById("user").value;
-    let newRegaloOne = document.getElementById("regaloOne").value;
-    let newRegaloTwo = document.getElementById("regaloTwo").value;
-    let newRegaloThree = document.getElementById("regaloThree").value;
 
-    arrayUser[indexArray].name = newName;
-    arrayUser[indexArray].password = newPass;
-    arrayUser[indexArray].username = newUser;
-    arrayUser[indexArray].regaloOne = newRegaloOne;
-    arrayUser[indexArray].regaloTwo = newRegaloTwo;
-    arrayUser[indexArray].regaloThree = newRegaloThree;
-    arrayUser[indexArray].secret = amigoEncontrado;
+    Swal.fire({
+        title: 'Do you want to save the changes?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't save`,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
 
-    guardarDB(arrayUser);
+            let newName = arrayUser[indexArray].name;
+            let newPass = document.getElementById('pass').value;
+            let newUser = document.getElementById("user").value;
+            let newRegaloOne = document.getElementById("regaloOne").value;
+            let newRegaloTwo = document.getElementById("regaloTwo").value;
+            let newRegaloThree = document.getElementById("regaloThree").value;
+        
+            arrayUser[indexArray].name = newName;
+            arrayUser[indexArray].password = newPass;
+            arrayUser[indexArray].username = newUser;
+            arrayUser[indexArray].regaloOne = newRegaloOne;
+            arrayUser[indexArray].regaloTwo = newRegaloTwo;
+            arrayUser[indexArray].regaloThree = newRegaloThree;
+            arrayUser[indexArray].secret = amigoEncontrado;
+        
+            guardarDB(arrayUser);
+        
+            ClearCamp();
 
-    ClearCamp();
+            Swal.fire('Saved!', '', 'success')
+            winAudio.play();
+        }
+        else if (result.isDenied) {
+            Swal.fire('Changes are not saved', '', 'info')
+            wrongAudio.play();
+        }
+    })
 
 }
 
@@ -2048,6 +2090,13 @@ const getUserAdmin = (userInput, nameInput) => {
             indexArray = index;
             console.log(index)
 
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Consulta Realizada con Exíto',
+                showConfirmButton: false,
+                timer: 1200
+            })
 
             let name = document.getElementById('name').value = "";
             let pass = document.getElementById("pass").value = "";
@@ -2069,14 +2118,6 @@ const getUserAdmin = (userInput, nameInput) => {
             regaloOne = document.getElementById("regaloOne").value = getRegaloOne;
             regaloTwo = document.getElementById("regaloTwo").value = getRegaloTwo;
             regaloThree = document.getElementById("regaloThree").value = getRegaloThree;
-
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Consulta Realizada con Exíto',
-                showConfirmButton: false,
-                timer: 1200
-            })
             
         }
         else{
